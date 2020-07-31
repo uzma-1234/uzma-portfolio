@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.mobile-container {
+  max-width: 1500px;
+  margin: auto;
+  
+  height: 800px;
+  color: chocolate;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: lightcyan;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: tan;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.active {
+  background-color:antiquewhite ;
+  color: white;
+}
+h3{
+            text-align:center;
+            font-family: Lucida Handwriting;
+            font-size: 150%;
+          }
+          p{
+            
+            font-size: 150%;
+            color:white;
+          }
+          
+          .one{
+            background-image: url('keyboard.jpg');
+            opacity:0.7;
+             background-repeat: no-repeat;
+             background-size:cover;
+  border: 1px solid black;
+  width:70%;
+  height:30%;
+
+  
+  padding-top: 40px;
+  padding-right: 150px;
+  padding-bottom: 40px;
+  padding-left: 150px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="index.html" class="active">Home</a>
+  <div id="myLinks">
+    <a href="about.html">About</a>
+    <a href="resume2.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+       <h3>Portfolio</h3>
+       <br>
+       <br>
+       <table>
+        <tr>
+          <td>
+      
+       <img src="mylogo.jpg.png" alt="aboutme" width="300px" height="300px"/></td>
+       
+       
+       <td>
+
+
+       <div class="one">
+        
+        <p class="three">welcome to my cv & portfolio .Please take a moment to browse my work ,skills and Professional life.It's my firm belief that a good challenge offers an oppurtunity to develop and improve ,which is why i make a point of seeking out new ones in the professional realm as well as in my personal life.Contact me directly to learn more.</p></div>
+      </td>
+    </tr>
+  </table>
+
+<!-- End smartphone / tablet look -->
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
