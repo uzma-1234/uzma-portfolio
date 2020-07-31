@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">     
+<style>
+	body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("nature.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 50%; 
+  width:100%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of thddddddddde page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 123%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60%;
+  padding: 15px;
+  text-align: center;
+}
+h3{
+	text-align:center;
+	font-family:Times new roman;
+	font-size: 200%;
+	color:aquamarine;
+}
+.four{
+	text-align:center;
+	font-family: Arial;
+	font-size: 140%;
+	border:1px solid lavender;
+	color:gold;
+}
+img {
+  
+  border-radius: 4px;
+  
+}
+
+
+h2{
+	text-align:center;
+	font-family: Arial;
+	font-size: 170%;
+	
+	color:purple;
+}
+h1{
+	text-align:center;
+	font-family: Arial;
+	font-size: 170%;
+	
+	color:khaki;
+}
+h4{
+	text-align:center;
+	font-family: Verdana;
+	font-size: 100%;
+}
+pre{
+
+font-family:Verdana;
+font-size: 90%;
+}
+
+.one{
+   background-image: url('meet.jpg');
+   opacity:0.55;
+       			 background-repeat: no-repeat;
+       			 background-size:cover; 
+       			 width:700px;
+       			 height:400px ;  			
+  border: 1px solid black;
+  border-radius:8px;
+  font-size: 350%;
+  font-family:cursive;
+  color:crimson;
+  padding-top: 50px;
+  padding-right: 70px;
+  padding-bottom: 50px;
+  padding-left: 70px;
+}
+
+.three{
+  font-family:Arial;
+  color:white;
+  font-size: 110%;
+}
+ 
+.flex-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.flex-container > div {
+  background-color:lavenderblush;
+  width: 500px;
+  margin: 10px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  color:chocolate;
+  font-family: Times new roman;
+}
+.container {
+  width: 50%;
+  background-color: #ddd;
+  border-radius:10px;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius:10px;
+  color: white;
+}
+
+.C {width:70%; background-color: #4CAF50;}
+.Python {width: 60%; background-color: #2196F3;}
+.HTML {width: 80%; background-color: #f44336;}
+.Datascience{width: 60%; background-color: #808080;}
+.myClass {
+  color: white;
+  background-color: mistyrose;
+  width:50%;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  margin-left: 300px;
+  font-size: 150%;
+  color:goldenrod;
+}
+.image {
+  /* Full height */
+  height: 40%; 
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Images used */
+.img1 { background-image: url("singing.jpg");opacity:0.8;font-size: 100%;font-family: Verdana;border:solid;padding-right: 10px;padding-top: 80px;padding-bottom: 50px,}
+.img1:hover{
+	opacity: 1.0;
+}
+.img2 { background-image: url("cooking.jpg");opacity:0.6;font-size: 100%;font-family: Verdana;border:solid;padding-right: 10px;padding-top: 80px;padding-bottom: 50px }
+.img2:hover{
+	opacity: 1.0;
+}
+.img3 { background-image: url("travelling.jpg");opacity:0.5;font-size: 100%;font-family: Verdana;border:solid;padding-right: 10px;padding-top: 80px;padding-bottom: 50px  }
+.img3:hover{
+	opacity: 1.0;
+}
+.img4 { background-image: url("painting.jpg");opacity:0.6;font-size: 100%;font-family: Verdana;border:solid;padding-right: 10px;padding-top: 80px;padding-bottom: 50px  }
+.img4:hover{
+	opacity: 1.0;
+}
+.img5 { background-image: url("exploring.jpg"); opacity:0.6;font-size: 100%;font-family: Verdana;border:solid;padding-right: 10px;padding-top: 80px;padding-bottom: 50px }
+.img5:hover{
+	opacity: 1.0;
+}
+
+/* Position text in the middle of the page/image */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 200px;
+  }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.center{
+			
+			
+			text-align:center;
+			color: chocolate;
+			background-color: lavenderblush;
+			font-size: :200%;
+			margin-left: auto;
+			margin-right: auto;
+			width:50%;
+			padding:1px;
+		}
+		.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+  margin-left: 50px;
+  
+}
+.thumbnail {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.transparent {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+.transparent img {vertical-align: middle;}
+
+.transparent .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 75%;
+  padding: 10px;
+
+  font-size: 120%;
+  color:thistle;
+  font-family: Arial;
+}
+.change{
+	color:darkgoldenrod;
+}
+.change2{
+	color:slategray;
+}
+.change3{
+	font-family: Lucida handwriting;
+	color:black;
+}
+.change4{
+	color:rosybrown;
+}
+</style>
+<body>
+<h3 style="font-family:cursive,color:palevioletred">Concerning me</h3>
+<br>
+<br>
+<table style="margin-left:100px">
+	<tr>
+		<td>
+ 
+
+	<img src="uzmapic.jpg" alt="pic" width="400px" height="400px" />  
+</td>
+<td>
+	<div class="one">
+<pre>Meet 
+	 Mohammed Uzma
+	 </pre>
+	 
+	</div>
+	
+	</td> 
+</tr>
+</table>
+<br>
+<br>
+<hr>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h4 class="four">My Bio</h4>
+ <div class="two">
+<pre class="three">Iam Mohammed Uzma from Nellore.
+A Passionate and an aspiring fresher with highly self driven and with full zeal
+having bachelors of technology degree in Electronics and communication engineering.
+Iam passionate about learning new technologies.Always willing to work on new technologies
+and innovate new things which can improve the existing technology.Iam a quick learner and 
+always works on new ventures,accepting challenges that can uplift my career.This is a virtue 
+as it can take me ahead in both my professional and personal life.</pre></div>
+ 
+</div>
+
+
+<h2>Academic Experience</h2>
+<h4>My studies</h4>
+<div class="flex-container">
+  <div><h4>SSC/Matriculation</h4>
+<pre>Schooling:Vidyodaya E.M high school
+CGPA:9.7</pre></div>
+  <div><h4>HSC/Intermediate</h4>
+<pre>Intermediate:Sri Chaitanya J.R College
+Percentage:98.5%</pre></div>
+  <div><h4>UG/B-Tech</h4>
+<pre>Pursuying year:III year
+B-Tech:Geethanjali Institute of 
+science and technology
+CGPA:9.0(till 5th sem)</pre></div>
+<br>
+<br>
+
+</div>  
+</div>
+<h3>Experience</h3>
+<div class="transparent">
+  <img src="work.jpg" alt="Notebook" width="680" height="250">
+  <div class="content">
+    <h1>Internship</h1>
+    <pre>
+     company:Verzeo
+     Duration:May 2020-july 2020
+     Course:Machine Learning with python</pre>
+  </div>
+</div>
+<br>
+<h2 style=text-align:center;font-family:
+serif>certifications</h2>
+<p style=text-align:center;font-family:Verdana,font-size:70%>click to see my certificates</p>
+<br>
+<div class="row">
+  <div class="column">
+    <a target="_self" href="c2c.jpg">
+    <img class="thumbnail" src="c2c.jpg" alt="Snow" style="width:70%">
+  </a>
+  </div>
+  <div class="column">
+    <a target="_self" href="verzeo.jpg">
+    <img class="thumbnail" src="verzeo.jpg" alt="Forest" style="width:70%">
+  </a>
+  </div>
+  <div class="column">
+    <a target="_self" href="nptel cert.jpg">
+    <img class="thumbnail" src="nptel cert.jpg" alt="Mountains" style="width:70% ">
+  </a>
+  </div>
+</div>
+<h2 class="change">My Skills</h2>
+
+<p>C</p>
+<div class="container">
+  <div class="skills C">80%</div>
+</div>
+
+<p>Python</p>
+<div class="container">
+  <div class="skills Python">75%</div>
+</div>
+
+<p>HTML</p>
+<div class="container">
+  <div class="skills HTML">70%</div>
+</div>
+
+<p>Datascience</p>
+<div class="container">
+  <div class="skills Datascience">60%</div>
+</div>
+<br>
+<h2 class="change2">Professional skills</h2>
+<div class="center">
+	<p>Leadership</p>
+</div>
+<br>
+<div class="center">
+	<p>Team Management</p>
+</div>
+<br>
+<div class="center">
+	<p>Creativity</p>
+</div>
+<br>
+<div class="center">
+	<p>Emotional Intelligence</p>
+</div>
+<br>
+<div class="center">
+	<p>Interpersonal skills</p>
+</div>
+<br>
+<br>
+<h2 class="change4">Industrial Interests</h2>
+<br>
+<br>
+<div class="tooltip"><img src="ai.png" alt="icon" width="100px";height="50px"/>
+  <span class="tooltiptext">Artificial Intelligence</span></div>&emsp;&emsp;&emsp;
+  <div class="tooltip"><img src="dsicon.png" alt="icon" width="100px";height="5px"/>
+  <span class="tooltiptext">data science</span></div>&emsp;&emsp;&emsp;
+  <div class="tooltip"><img src="webicon.jpg" alt="icon" width="100px";height="50px"/>
+  <span class="tooltiptext">web designing</span></div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<h3 style="text-align:center,font-size:150%">Interests</h3>
+<div class="image img1"><h3 class="change3"><strong>Singing</strong></h3></div>
+<div class="image img2"><h3 class="change3"><strong>cooking</strong></h3></div>
+<div class="image img3"><h3 class="change3"><strong>Travelling</strong></h3></div>
+<div class="image img4"><h3 class="change3"><strong>Painting</strong></h3></div>
+<div class="image img5"><h3 class="change3"><strong>Exploring</strong></h3></div>
+
+
+
+
+
+ 
+  
+
+</body>
+</head>
+</html>
